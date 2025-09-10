@@ -1,4 +1,4 @@
-package ru.stimax.ru.stimmax
+package ru.stimmax.cotlincouse.lessons.lesson02
 
 fun main() {
     val name = "Evgeni"
