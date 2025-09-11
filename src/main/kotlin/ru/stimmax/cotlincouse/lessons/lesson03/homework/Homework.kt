@@ -62,12 +62,12 @@ lateinit var availableEquipmentList: String
 
 //18.График питания участников (зависит от поставщика питания, определяемого за неделю до начала)
 var eventMealPlan: String = ""
-    set(value) {
-        field = if (value == "KFC")
+    get() {
+        field = if (field == "KFC")
             "14.00 - 15.00"
         else
             "15.00 - 16.00"
-
+        return field
 
     }
 
