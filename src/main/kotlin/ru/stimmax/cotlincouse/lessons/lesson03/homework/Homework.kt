@@ -62,14 +62,16 @@ lateinit var availableEquipmentList: String
 
 //18.График питания участников (зависит от поставщика питания, определяемого за неделю до начала)
 var eventMealPlan: String = ""
-    get() {
-        field = if (field == "KFC")
-            "14.00 - 15.00"
-        else
-            "15.00 - 16.00"
-        return field
-
+    get() = when (field) {
+        "KFC" -> "14.00 - 15.00"
+        "DoDo" -> "13.00 - 14.00"
+        else -> "Не определено"
     }
+
+
+
+
+
 
 //19. План мероприятий на случай сбоев
 val contingencyPlan: String by lazy { "План мероприятий на случай сбоев" }
