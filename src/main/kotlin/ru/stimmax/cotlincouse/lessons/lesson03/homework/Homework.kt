@@ -15,7 +15,7 @@ var location: String = "Moscow"
 private val budget: String = "подробная информация с перечислением поставщиков и сумм для внутреннего пользования"
 
 //5. Количество участников
-var participants: Int = 30
+var participants: Int = 0
 
 //6. Длительность хакатона
 lateinit var duration: String
@@ -112,6 +112,7 @@ const val maxNoiseLevel: String = "12DC"
 
 //32.Индикатор превышения уровня шума в помещениях (превышен или не превышен в данный момент)
 var noiseLevelAlert: Boolean = false
+
 
 //33. План взаимодействия с прессой
 private val pressInteractionPlan: String by lazy { "План взаимодействия с прессой" }
