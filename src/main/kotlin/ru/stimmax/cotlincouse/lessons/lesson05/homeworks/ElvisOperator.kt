@@ -18,7 +18,7 @@ fun main() {
 
 
     // example 3
-    val labTechnicianMetrics: Double? = null// 18.4
+    val labTechnicianMetrics: String? = null// 18.4
     val atmosphericPressure: Any = labTechnicianMetrics ?: "Ошибка отсутствия показаний АД"
     println(atmosphericPressure)
 
