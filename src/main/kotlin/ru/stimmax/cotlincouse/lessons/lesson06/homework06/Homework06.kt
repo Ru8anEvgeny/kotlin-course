@@ -7,7 +7,7 @@ fun main() {
     example1(12)
     dogAge(7.0)
     getMovementMethod(1.01)
-    calculateBonusPoints(1001)
+    calculateBonusPoints(1001.0)
     getDocumentType(".pdf")
     convertTemp(200.0, 'C')
     pickClothes(-31)
@@ -52,7 +52,7 @@ fun dogAge(age: Double) {
 // маршрута. Если маршрут до 1 км - "пешком", до 5 км - "велосипед", иначе - "автотранспорт".
 
 fun getMovementMethod(distance: Double) {
-    if (distance in 0.0..1.0) {
+    if (distance in 0.0..< 1.0) {
         println("Пешком")
     } else if (distance in 1.0..5.0) {
         println("Велосипед")
@@ -68,11 +68,11 @@ fun getMovementMethod(distance: Double) {
 // покупки и печатает в консоль количество бонусных баллов: 2 балла за каждые 100 рублей при сумме покупки
 // до 1000 рублей и 3 балла за каждые 100 рублей при сумме свыше этого.
 
-fun calculateBonusPoints(amount: Int) {
+fun calculateBonusPoints(amount: Double) {
     if (amount <= 1000.0) {
-        println((amount / 100) * 2)
+        println((amount.toInt() / 100) * 2)
     } else if (amount > 1000.0) {
-        println((amount / 100) * 3)
+        println((amount.toInt() / 100) * 3)
     }
 }
 
@@ -115,7 +115,7 @@ fun convertTemp(temp: Double, tempUnit: Char) {
 // При температурах ниже -30 и выше +35 рекомендуйте не выходить из дома.
 fun pickClothes(temp: Byte) {
     when (temp) {
-        in -30..10 -> println("куртка и шапка")
+        in -30 until 10 -> println("куртка и шапка")
         in 10..18 -> println("футболка и шорты")
         in 19..35 -> println("футболка и шорты")
         else -> println("не выходить из дома")
