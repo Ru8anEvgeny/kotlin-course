@@ -99,6 +99,25 @@ fun main() {
 
     }
 
+    for (i in 1..10) {
+        for (j in 1..10) {
+            print(i * j)
+        }
+        println()
+    }
 
 
+
+
+sum(5)
 }
+//Напишите функцию, которая суммирует числа от 1 до 'arg' с помощью цикла for. 'arg' - целочисленный аргумент функции
+
+fun sum (arg: Int){
+    var sum = 0
+    for (i in 1..arg) {
+        sum += i
+    }
+    println(sum)
+}
+
