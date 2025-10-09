@@ -105,7 +105,8 @@ fun formatEmail(email: String) {
 // (может быть любым). Извлеките название файла с расширением.
 
 fun getFileName(path: String) {
-    val result = path.split('/').last()
+    val result = path.split('/')
+        .last()
     println("Имя файла: $result")
 }
 
