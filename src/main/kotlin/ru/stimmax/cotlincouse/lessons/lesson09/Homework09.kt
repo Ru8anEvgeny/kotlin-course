@@ -77,11 +77,11 @@ fun main() {
 // Напротив каждого элемента должно быть написано “чётное” или “нечётное”.
 
     val num13 = arrayOf(1, 2, 5, 8, 10)
-    for (i in num13.indices) {
-        if (num13[i] % 2 == 0 ) {
-            println("${num13[i]} четное")
+    for (i in num13) {
+        if (i % 2 == 0 ) {
+            println("$i четное")
         } else {
-            println("${num13[i]} нечетное")
+            println("$i нечетное")
         }
 
     }
@@ -96,7 +96,7 @@ fun main() {
 
 //Работа со списками List
 //1. Создайте пустой неизменяемый список целых чисел.
-    val list1 = listOf(1, 2, 3, 5, 10)
+    val list1: List<Int> = listOf()
 // 2. Создайте неизменяемый список строк, содержащий три элемента (например, "Hello", "World", "Kotlin").
     val list2 = listOf("Hello", "World", "Kotlin")
 // 3. Создайте изменяемый список целых чисел и инициализируйте его значениями от 1 до 5
@@ -112,8 +112,8 @@ fun main() {
     println(list4)
 // 6. Создайте список целых чисел и используйте цикл для вывода каждого элемента на экран.
     val list5 = listOf(1, 2, 3, 4, 5)
-    for (i in list5.indices) {
-        println(list5[i])
+    for (i in list5) {
+        println(i)
     }
 
 // 7. Создайте список строк и получите из него второй элемент, используя его индекс.
@@ -145,7 +145,8 @@ fun main() {
     for (num in list11){
         if (num < min) {
             min = num
-        } else if (num > max) {
+        }
+        if (num > max) {
             max = num
         }
         println(max)
@@ -208,7 +209,7 @@ fun main() {
 
   fun selectString(text: Array<String>, texts: String) {
       for (i in text) {
-          if (i.contains(texts)) { // если в элемент из массива входит строка которая, лежит в texts
+          if (i.contains(texts, true)) { // если в элемент из массива входит строка которая, лежит в texts
               println(i) // выводим элемент массива
               return // заканчиваем функцию если нашлось совпадение
           }
@@ -222,7 +223,7 @@ fun main() {
 // Нужно распечатать булево значение true если строка есть. Реши задачу через цикл.
    fun selectSet(set: Set<String>, text1: String) {
        for (i in set){
-           if (i.contains(text1)) {
+           if (i.equals(text1)) {
                println(true)
                return
            }
