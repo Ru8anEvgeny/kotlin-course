@@ -90,13 +90,13 @@ fun main() {
 // 1. Словарь библиотека: Ключи - автор книги, значения - список книг
     val library = mutableMapOf<String, MutableList<String>>()
 // 2. Справочник растений: Ключи - типы растений (например, "Цветы", "Деревья"), значения - списки названий растений
-    val plantCatalog = mapOf<String, List<String>>("Деревья" to listOf("Сосна", "Береза"), "Цветы" to listOf("Роза", "Ромашка"))
+    val plantCatalog = mapOf<String, MutableList<String>>("Деревья" to mutableListOf("Сосна", "Береза"), "Цветы" to mutableListOf("Роза", "Ромашка"))
 // 3. Четвертьфинала: Ключи - названия спортивных команд, значения - списки игроков каждой команды
     val quarterfinal = mapOf<String, MutableList<String>>()
 // 4. Курс лечения: Ключи - даты, значения - список препаратов принимаемых в дату
     val treatmentCourse = mapOf<String, List<String>>()
 // 5. Словарь путешественника: Ключи - страны, значения - словари из городов со списком интересных мест.
-    val travelerGuide = mapOf<String, Map<String, MutableList<String>>>()
+    val travelerGuide = mutableMapOf<String, MutableMap<String, MutableList<String>>>()
 
 
 
