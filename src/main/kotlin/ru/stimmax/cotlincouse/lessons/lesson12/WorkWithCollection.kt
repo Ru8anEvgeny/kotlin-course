@@ -187,6 +187,15 @@ fun main() {
     val distinctNumber = listOf(1, 1, 4, 5, 7, 5).distinct()
     println(distinctNumber)
 
+    // метод take - берет первые несколько элементов сколько мы указали из коллекции.
+    println(distinctNumber.take(3))// Создали список из первых 3 значений списка distinctNumber
+
+    // метод takeLast - берет несколько последних значений.
+    println(distinctNumber.takeLast(3)) // Создали список из последних 3 значений списка distinctNumber
+
+    // метод drop - возвращает коллекцию в которую не будут входить первые несколько элементов. Сколько мы указали
+    println(distinctNumber.drop(3))
+
 
 
 
