@@ -1,6 +1,6 @@
 package ru.stimmax.cotlincouse.lessons.lesson14.homeworks14
 
-class Shelf(val capacity: Int, val items: MutableList<String>) {
+class Shelf(val capacity: Int, private val items: MutableList<String>) {
 // val items - Список предметов
 // capacity - максимальная сумма букв всех названий предметов, которые могут быть размещены на полке.
 // name - название предмета
