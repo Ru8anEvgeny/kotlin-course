@@ -1,5 +1,7 @@
 package ru.stimmax.cotlincouse.lessons.lesson16.homework16.cart
 
+import ru.stimmax.cotlincouse.lessons.lesson16.Colors
+
 class Cart {
     val item = mutableMapOf<String, Int>()
 
@@ -46,14 +48,17 @@ class Cart {
         }
     }
 
-    fun toStrings(color: String, items: Map<String, Int>) {
-        val result = """
-            $color
+    override fun toString(): String {
+        return """
+            ${Colors.RED}
             Количество товара: ${item.keys.count()}
             Количество единиц товара: ${item.values.sum()}
         """.trimIndent()
-        println(result)
+
     }
-
-
 }
+
+
+
+
+

@@ -11,7 +11,7 @@ fun main() {
     cart.addToCart(mapOf("Товар" to 1, "Товар6" to 3))
     println(cart.item)
 
-    cart.toStrings(Colors.RED, cart.item)
+    println(cart)
 
 
 
