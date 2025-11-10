@@ -1,4 +1,4 @@
-package ru.stimmax.cotlincouse.lessons.lesson18.homenetwork
+package ru.stimmax.cotlincouse.lessons.lesson18.homework18
 
 import java.io.InputStream
 
@@ -84,7 +84,7 @@ interface Rechargeable { // Перезаряжаемый
 //Задача 1. Создай абстрактные классы устройств, используя эти интерфейсы. Реализовывать методы не нужно.
 
 abstract class Fridge1 : Powerable, Openable, TemperatureRegulatable
-abstract class Washer : Powerable, Openable, TemperatureRegulatable, WaterConnection, AutomaticShutdown, Drainable, Timable, Programmable
+abstract class Washers : Powerable, Openable, TemperatureRegulatable, WaterConnection, AutomaticShutdown, Drainable, Timable, Programmable
 abstract class Lamp : Powerable, BatteryOperated, LightEmitting
 abstract class ElectronicWatches : Powerable, Rechargeable
 abstract class RobotVacuumCleaner : Powerable, Openable, AutomaticShutdown, Timable, Programmable, Movable, Cleanable, Rechargeable
@@ -122,7 +122,11 @@ abstract class ProgrammableHardware : IncludedEquipment(), Programmable {
 // Задача 4. Создай абстрактный класс оборудования с возможностью устанавливать температуру и открываться и с
 // наследованием от программируемого оборудования. Также имплементируй интерфейсы.
 
-abstract class Equipment : ProgrammableHardware(), Openable, TemperatureRegulatable {
+abstract class Equipment(
+    open val model: String,
+    open val color: String,
+    open val serialNumber: String
+) : ProgrammableHardware(), Openable, TemperatureRegulatable {
 
     override fun open() {
         println("Крышка открыта")
@@ -131,8 +135,6 @@ abstract class Equipment : ProgrammableHardware(), Openable, TemperatureRegulata
     override fun close() {
         println("Крышка закрыта")
     }
-
-    override val maxTemperature: Int = 100
 
     override fun setTemperature(temp: Int) {
         println("Установленная температура: $temp")
