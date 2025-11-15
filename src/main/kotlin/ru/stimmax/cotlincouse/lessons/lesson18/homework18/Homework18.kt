@@ -140,9 +140,6 @@ abstract class Equipment(
         println("Установленная температура: $temp")
     }
 
-
-
-
 }
 
 
