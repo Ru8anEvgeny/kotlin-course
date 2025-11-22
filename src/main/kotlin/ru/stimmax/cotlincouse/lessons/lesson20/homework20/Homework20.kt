@@ -93,4 +93,5 @@ fun String.twitterize(authors: List<String>) {
 fun main() {
     println(5.within(1,2))
     println(10.12.within(19.5, 39))
+    "qweeq".toRegex()
 }

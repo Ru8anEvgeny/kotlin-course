@@ -167,7 +167,7 @@ fun main() {
     println(average)
 
     // Можно получить макс и мин значения у числовых коллекций
-    val min = result7.maxOrNull()// если список пуст вернет null
+    val min = result7.minOrNull()// если список пуст вернет null
     println(min)
 
     val max = result7.maxOrNull()// если список пуст вернет null
