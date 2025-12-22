@@ -1,4 +1,5 @@
-package ru.stimmax.cotlincouse.lessons.lesson25.homework25//Задание 1. Функция высшего порядка.
+package ru.stimmax.cotlincouse.lessons.lesson25.homework25
+//Задание 1. Функция высшего порядка.
 //Создайте функцию timeTracker, которая принимает другую функцию в качестве аргумента и измеряет время
 // её выполнения. Функция timeTracker должна возвращать затраченное время в миллисекундах.
 // Для измерения времени используйте System.currentTimeMillis() до и после выполнения переданной функции.
