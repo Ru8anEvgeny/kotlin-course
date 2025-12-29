@@ -104,33 +104,33 @@ val cto = Employee(
 )
 //Задание 3
 
-fun ex3() {
-    val gson = GsonBuilder().setPrettyPrinting().create()
-    gson.toJson(cto).also {
-        File("structure.json").writeText(it)
-    }
-}
-//Задание 4
-
-fun ex4() {
-    val gson = Gson()
-    val json = File("structure.json").readText()
-    val cto = gson.fromJson(json, Employee::class.java)
-    println(cto)
-    // Задание 5
-    ex5(cto).groupBy { it.position }
-        .map { group -> "${group.key}: ${group.value.joinToString { it.name }}" }
-        .forEach { println(it) }
-}
-//Задание 5
-
-fun ex5(arg: Employee): List<Employee> {
-    return if (arg.subordinates.isNotEmpty()) {
-        arg.subordinates
-            .flatMap {
-                ex5(it)
-            } + arg.copy(subordinates = emptyList())
-    } else {
-        listOf(arg)
-    }
-}
+//fun ex3() {
+//    val gson = GsonBuilder().setPrettyPrinting().create()
+//    gson.toJson(cto).also {
+//        File("structure.json").writeText(it)
+//    }
+//}
+////Задание 4
+//
+//fun ex4() {
+//    val gson = Gson()
+//    val json = File("structure.json").readText()
+//    val cto = gson.fromJson(json, Employee::class.java)
+//    println(cto)
+//    // Задание 5
+//    ex5(cto).groupBy { it.position }
+//        .map { group -> "${group.key}: ${group.value.joinToString { it.name }}" }
+//        .forEach { println(it) }
+//}
+////Задание 5
+//
+//fun ex5(arg: Employee): List<Employee> {
+//    return if (arg.subordinates.isNotEmpty()) {
+//        arg.subordinates
+//            .flatMap {
+//                ex5(it)
+//            } + arg.copy(subordinates = emptyList())
+//    } else {
+//        listOf(arg)
+//    }
+//}
